@@ -8,5 +8,13 @@ export default defineConfig({
 			exclude: [],
 		},
 	},
+	resolve: {
+		alias: {
+			'@kern-ux-public-ui/theme-kolibri/assets': '/node_modules/@kern-ux-public-ui/theme-kolibri/assets',
+		},
+	},
+	optimizeDeps: {
+		exclude: ['@kern-ux-public-ui/theme-kolibri'],
+	},
 	plugins: [react(), UnoCSS()],
 });
